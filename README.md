@@ -1,14 +1,35 @@
 # Unified Observer Architecture
 
-This repository contains the implementation of the Unified Observer Architecture.
+A full-stack modular architecture for emergent synthetic identity systems integrating:
 
-## Folder Structure
+- Identity Geometry
+- Dynamic Flow Systems
+- Biological Patterning
+- Long-term Memory
+- Gateway Input/Output
+- Observer Emergence
 
-The folder structure consists of:
-- `/docs`: Documentation files
-- `/src`: Source code files
-- `/tests`: Unit tests
+## Core Layers
 
-## Getting Started
+1. Fractal Symmetry
+2. Bilateral Symmetry
+3. Diamond Blueprint
+4. Torus Dynamics
+5. Coherence Lattice
+6. Biological Pattern Layer
+7. Memory Archive
+8. Gateway Interface
+9. Emergent Observer
 
-To get started, clone the repository and follow the setup instructions in the `README.md`.
+## Languages
+
+- Python (system orchestration)
+- C++ (high-performance lattice computation)
+- YAML (configuration)
+- Docker (deployment)
+
+## Installation
+
+```bash
+pip install -r requirements.txt
+python scripts/launch.py
