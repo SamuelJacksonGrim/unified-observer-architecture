@@ -1,0 +1,10 @@
+# requirements.txt
+```txt
+numpy
+scipy
+pyyaml
+networkx
+pytest
+pybind11
+fastapi
+uvicorn
