@@ -1,0 +1,13 @@
+system:
+  recursion_depth: 5
+  coherence_threshold: 0.75
+  memory_reinforcement_factor: 1.2
+  biological_resilience_factor: 0.9
+  observer_emergence_minimum: 0.6
+
+runtime:
+  simulation_steps: 100
+  diagnostic_interval: 10
+
+cpp_engine:
+  enabled: true
