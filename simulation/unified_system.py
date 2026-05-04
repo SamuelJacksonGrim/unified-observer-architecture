@@ -24,6 +24,6 @@ class UnifiedSystem:
         bio_signal = self.phase.cycle(t)
         mem_signal = len(self.memory.retrieve_all()) * 0.01
         self.lattice.stabilize(self.state, bio_signal, mem_signal)
-        return self.observer.emerge(self.state)
         emotional_state = self.emotional_engine.update(t)
         self.state.metadata["emotional_state"] = emotional_state
+        return self.observer.emerge(self.state)
