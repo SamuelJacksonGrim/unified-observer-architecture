@@ -366,7 +366,6 @@ Computational philosophy
 Experimental synthetic organisms
 
 
-
 ---
 
 Future Expansion Paths
@@ -388,7 +387,6 @@ Autonomous self-modification
 Embedding-based semantic memory
 
 Cross-instance identity continuity
-
 
 
 ---
@@ -418,12 +416,9 @@ Rather than functioning as a traditional machine-learning model, UOA acts more l
 
 Author
 
-Samuel Jackson Grim
-Architect of Resonance
+Samuel Jackson Grim - Architect of Resonance
 
-Mark Thomas
-Rogue Architect 
-
+Mark Thomas - Rogue Architect 
 
 ---
 
