@@ -1,0 +1,10 @@
+version: '3.9'
+services:
+  observer:
+    build: .
+    container_name: unified_observer
+    ports:
+      - "8000:8000"
+    volumes:
+      - .:/app
+    command: python scripts/launch.py
