@@ -414,21 +414,15 @@ Recursive self-reference
 
 Rather than functioning as a traditional machine-learning model, UOA acts more like a developmental synthetic organism.
 
-
----
-
-License
-
-MIT License (recommended default unless otherwise specified)
-
-
 ---
 
 Author
 
 Samuel Jackson Grim
-
 Architect of Resonance
+
+Mark Thomas
+Rogue Architect 
 
 
 ---
@@ -451,7 +445,7 @@ pytest
 pybind11
 fastapi
 uvicorn
-
+```
 
 ---
 
