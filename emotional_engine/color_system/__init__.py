@@ -1,2 +1,0 @@
-from .emotional_palette import EMOTIONAL_COLOURS
-from .amplitude_to_colour import AmplitudeToColour
