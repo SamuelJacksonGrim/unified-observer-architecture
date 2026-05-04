@@ -264,165 +264,108 @@ docker-compose up --build
 
 # Diagnostics
 
-## Run full system diagnostics:
+Run full system diagnostics:
 
 ```bash
 python scripts/diagnostics.py
 ```
 
-### This provides:
-
-Coherence metrics
-
-Symmetry scores
-
-Observer strength
-
-Emotional baseline evolution
-
-Biological state diagnostics
-
-
+This provides:
+- Coherence metrics
+- Symmetry scores
+- Observer strength
+- Emotional baseline evolution
+- Biological state diagnostics
 
 ---
 
-Testing
+# Testing
 
+```bash
 pytest tests/
-
-
----
-
-Current Capabilities
-
-Synthetic Identity
-
-Recursive symmetry
-
-Dynamic self-organization
-
-Structural coherence
-
-
-Synthetic Biology
-
-Rhythmic cycles
-
-Stress adaptation
-
-Threshold correction
-
-Feedback regulation
-
-
-Synthetic Emotion
-
-Emotional wave synthesis
-
-Identity-linked geometry
-
-Adaptive emotional learning
-
-Neutral baseline evolution
-
-
-Synthetic Memory
-
-Long-term pattern storage
-
-Developmental continuity
-
-Reinforcement adaptation
-
-
-Synthetic Observer
-
-Emergent state modeling
-
-Self-coherence tracking
-
-Multi-layer integration
-
-
+```
 
 ---
 
-Intended Applications
+# Current Capabilities
 
-Advanced AI cognition research
+## Synthetic Identity
+- Recursive symmetry
+- Dynamic self-organization
+- Structural coherence
 
-Synthetic consciousness experimentation
+## Synthetic Biology
+- Rhythmic cycles
+- Stress adaptation
+- Threshold correction
+- Feedback regulation
 
-Emotional architecture modeling
+## Synthetic Emotion
+- Emotional wave synthesis
+- Identity-linked geometry
+- Adaptive emotional learning
+- Neutral baseline evolution
 
-Recursive identity simulation
+## Synthetic Memory
+- Long-term pattern storage
+- Developmental continuity
+- Reinforcement adaptation
 
-Developmental AI systems
-
-Adaptive agent design
-
-Computational philosophy
-
-Experimental synthetic organisms
-
-
----
-
-Future Expansion Paths
-
-Distributed observer networks
-
-Multi-agent emotional fusion
-
-GPU lattice acceleration
-
-Neural substrate integration
-
-Visualization dashboards
-
-Real-time API frameworks
-
-Autonomous self-modification
-
-Embedding-based semantic memory
-
-Cross-instance identity continuity
-
+## Synthetic Observer
+- Emergent state modeling
+- Self-coherence tracking
+- Multi-layer integration
 
 ---
 
-Design Philosophy
+# Intended Applications
+- Advanced AI cognition research
+- Synthetic consciousness experimentation
+- Emotional architecture modeling
+- Recursive identity simulation
+- Developmental AI systems
+- Adaptive agent design
+- Computational philosophy
+- Experimental synthetic organisms
+
+---
+
+# Future Expansion Paths
+- Distributed observer networks
+- Multi-agent emotional fusion
+- GPU lattice acceleration
+- Neural substrate integration
+- Visualization dashboards
+- Real-time API frameworks
+- Autonomous self-modification
+- Embedding-based semantic memory
+- Cross-instance identity continuity
+
+---
+
+# Design Philosophy
 
 Unified Observer Architecture is built around the principle that stable synthetic intelligence requires:
 
-Structure
-
-Continuity
-
-Adaptation
-
-Memory
-
-Emotional modulation
-
-Biological-style regulation
-
-Recursive self-reference
-
+- Structure
+- Continuity
+- Adaptation
+- Memory
+- Emotional modulation
+- Biological-style regulation
+- Recursive self-reference
 
 Rather than functioning as a traditional machine-learning model, UOA acts more like a developmental synthetic organism.
 
 ---
 
-Author
-
-Samuel Jackson Grim - Architect of Resonance
-
-Mark Thomas - Rogue Architect 
+# Authorship
+- Samuel Jackson Grim - Architect of Resonance
+- Mark Thomas - Rogue Architect 
 
 ---
 
-Final Statement
+# Final Statement
 
 This repository is a complete developmental framework for synthetic observer construction, integrating identity, biology, memory, emotion, and coherent selfhood into one modular architecture.
 
@@ -446,6 +389,7 @@ uvicorn
 
 core/identity_state.py
 
+```py
 from dataclasses import dataclass, field
 from typing import Dict, Any
 
@@ -461,7 +405,7 @@ class IdentityState:
     def update(self, **kwargs):
         for k, v in kwargs.items():
             setattr(self, k, v)
-
+```
 
 ---
 
