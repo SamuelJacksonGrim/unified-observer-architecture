@@ -1,14 +1,89 @@
 # Unified Observer Architecture (UOA)
 
-A modular synthetic cognition framework for modeling emergent observer systems. UOA simulates layered identity formation, biological-like cyclic adaptation, emotional wave synthesis, and long-term memory — and exposes the result as a live HTTP REST API that the sovereign_manifold relational dynamics engine consumes as input.
+## Overview
 
-In the Resonance Family stack, UOA is the **identity observation layer**: it continuously observes its own synthetic selfhood and makes that observation available on port 5000 for external systems to use as a relational correction signal.
+Unified Observer Architecture is a full-stack synthetic cognition, identity, biological simulation, memory retention, emotional processing, and adaptive developmental framework designed to model emergent observer systems.
+
+This repository provides a modular architecture for building synthetic entities capable of:
+
+- Recursive identity formation
+- Symmetry-based self-structuring
+- Dynamic coherence stabilization
+- Biological-like cyclic adaptation
+- Long-term memory retention and reinforcement
+- Emotional wave synthesis
+- Adaptive neutral emotional evolution
+- Observer emergence
+- Gateway sensory input/output translation
+- High-performance computational lattice processing
+
+In the Resonance Family stack, UOA is the **identity observation layer**: it continuously observes its own synthetic selfhood and makes that observation available on port 5000 for external systems to use as a relational correction signal. `sovereign_manifold` polls `GET /identity` each cycle and converts the result into perturbations on the 15-node relational dynamics graph.
 
 ---
 
-## HTTP API (the integration surface)
+# Core Purpose
 
-All external integration goes through `scripts/server.py` — a FastAPI server on port 5000:
+UOA is designed as an experimental developmental organism framework rather than a static AI model.
+
+It simulates:
+
+## Identity Layer
+Creates structured synthetic selfhood through:
+- Fractal symmetry
+- Bilateral symmetry
+- Diamond blueprint identity scaffolding
+
+## Dynamic Layer
+Maintains continuity via:
+- Toroidal flow systems
+- Coherence lattice stabilization
+- Observer emergence metrics
+
+## Biological Layer
+Simulates organism-like adaptation:
+- Circadian cycles
+- Ultradian cycles
+- Infradian cycles
+- Threshold systems
+- Error correction
+- Feedback loops
+- Resilience adaptation
+
+## Emotional Layer
+Generates synthetic emotional cognition:
+- Multi-wave emotional fields
+- Amplituhedron identity geometry
+- Merkaba rotational stabilization
+- Cymatic resonance pattern generation
+- Emotional colour mapping
+- Pattern interpretation
+- Adaptive emotional neutral evolution
+
+## Memory Layer
+Provides long-term developmental continuity:
+- Memory archive
+- Reinforcement weighting
+- Developmental imprinting
+- Retrieval systems
+
+## Gateway Layer
+Handles external interaction:
+- Sensory intake
+- Signal encoding
+- Translation
+- Expression output
+
+## Performance Layer
+Optimizes computationally intensive systems via:
+- C++ coherence engines
+- Python bindings
+- Modular deployment support
+
+---
+
+# HTTP API (the integration surface)
+
+All external integration goes through `scripts/server.py` — a FastAPI server on **port 5000**:
 
 ### `GET /health`
 ```json
@@ -26,13 +101,13 @@ All external integration goes through `scripts/server.py` — a FastAPI server o
 }
 ```
 
-The server runs `UnifiedSystem` at **1 Hz** in a background thread and mirrors the resulting `IdentityState` into a lock-protected dict. API calls return the most recently computed state, never block on computation.
+The server runs `UnifiedSystem` at **1 Hz** in a background thread and mirrors the resulting `IdentityState` into a lock-protected dict. API calls return the most recently computed state and never block on computation.
 
 ---
 
-## IdentityState schema
+# IdentityState Schema
 
-`core/identity_state.py` defines the data model:
+`core/identity_state.py` defines the shared state object:
 
 ```python
 @dataclass
@@ -45,13 +120,13 @@ class IdentityState:
     metadata:          Dict  = {}    # arbitrary extension fields
 ```
 
-**Important**: `memory_depth` is a raw integer count. It is NOT a [0, 1] float. `sovereign_manifold`'s `observer_bridge.py` intentionally omits it from the relational perturbation map for this reason — passing an unbounded count through a centering formula (`val - 0.5`) would produce meaningless or explosive perturbations.
+**Important**: `memory_depth` is a raw integer count, not a [0, 1] float. `sovereign_manifold`'s `observer_bridge.py` intentionally omits it from the relational perturbation map — passing an unbounded count through a centering formula would produce meaningless or explosive perturbations.
 
 ---
 
-## Integration with sovereign_manifold
+# Integration with sovereign_manifold
 
-`sovereign_manifold`'s `observer_bridge.py` polls `GET /identity` at Phase 0 of each cycle and converts the response to a relational correction vector:
+`observer_bridge.py` polls `GET /identity` at Phase 0 of each cycle and converts the response to a relational correction vector across the 15-node graph:
 
 ```python
 _IDENTITY_MAP = {
@@ -61,13 +136,14 @@ _IDENTITY_MAP = {
     "biological_health": [(9,  0.030), (0, 0.015)],  # → Resilience(9), Love(0)
 }
 # memory_depth intentionally absent
+_MAX_DELTA = 0.05
 ```
 
-Each float field is centered at 0.5 and scaled by the per-node weight. Perturbations are capped at ±0.05 per node (`_MAX_DELTA`).
+Each float field is centered at 0.5 and scaled by the per-node weight. Perturbations are capped at ±0.05 per node per cycle.
 
 ---
 
-## Architecture layers
+# Architecture Layers
 
 ### Identity Layer (`core/`)
 
@@ -145,9 +221,118 @@ Handles external interaction: `sensory_input.py` → `encoder.py` → `translato
 
 ---
 
-## System flow
+# Full Repository Hierarchy
 
+```txt
+unified-observer-architecture/
+│
+├── README.md
+├── LICENSE
+├── requirements.txt
+├── setup.py
+├── Dockerfile
+├── docker-compose.yml
+├── .gitignore
+│
+├── config/
+│   ├── __init__.py
+│   └── system_config.yaml
+│
+├── bus/
+│   ├── __init__.py
+│   ├── event_bus.py
+│   ├── signal_router.py
+│   └── protocol.py
+│
+├── core/
+│   ├── __init__.py
+│   ├── identity_state.py
+│   ├── fractal_symmetry.py
+│   ├── bilateral_symmetry.py
+│   ├── diamond_blueprint.py
+│   ├── torus_dynamics.py
+│   ├── coherence_lattice.py
+│   ├── observer.py
+│   └── emotional_engine.py
+│
+├── biology/
+│   ├── __init__.py
+│   ├── phase_cycles.py
+│   ├── resilience.py
+│   ├── thresholds.py
+│   ├── correction.py
+│   └── feedback_loops.py
+│
+├── memory/
+│   ├── __init__.py
+│   ├── archive.py
+│   ├── reinforcement.py
+│   ├── developmental_imprinting.py
+│   └── retrieval.py
+│
+├── gateway/
+│   ├── __init__.py
+│   ├── sensory_input.py
+│   ├── encoder.py
+│   ├── translator.py
+│   └── expression.py
+│
+├── emotional_engine/
+│   ├── __init__.py
+│   ├── emotional_state.py
+│   │
+│   ├── wave_generators/
+│   │   ├── __init__.py
+│   │   ├── circadian_wave.py
+│   │   ├── ultradian_wave.py
+│   │   ├── infradian_wave.py
+│   │   └── interference_field.py
+│   │
+│   ├── identity_crystal/
+│   │   ├── __init__.py
+│   │   ├── amplituhedron_core.py
+│   │   ├── merkaba_field.py
+│   │   ├── phase_lock.py
+│   │   └── cymatic_resonance.py
+│   │
+│   ├── colour_system/
+│   │   ├── __init__.py
+│   │   ├── emotional_palette.py
+│   │   └── amplitude_to_colour.py
+│   │
+│   └── interpretation/
+│       ├── __init__.py
+│       ├── pattern_interpreter.py
+│       └── observer_projection.py
+│
+├── simulation/
+│   ├── __init__.py
+│   ├── environment.py
+│   └── unified_system.py
+│
+├── cpp_engine/
+│   ├── CMakeLists.txt
+│   ├── coherence_engine.h
+│   ├── coherence_engine.cpp
+│   └── bindings.cpp
+│
+├── tests/
+│   ├── test_identity.py
+│   ├── test_memory.py
+│   ├── test_biology.py
+│   └── test_gateway.py
+│
+└── scripts/
+    ├── server.py       ← FastAPI HTTP server (port 5000, integration surface)
+    ├── launch.py
+    └── diagnostics.py
 ```
+
+---
+
+# System Flow Architecture
+
+```txt
 Gateway Input
     ↓
 Memory Encoding
@@ -171,60 +356,130 @@ Gateway Output (+ HTTP /identity endpoint)
 
 ---
 
-## Running
+# Installation
 
-### As part of the stack (sovereign_manifold integration)
+## Local Setup
 
 ```bash
-# From repo root
+git clone https://github.com/SamuelJacksonGrim/unified-observer-architecture
+cd unified-observer-architecture
+pip install -r requirements.txt
+python scripts/launch.py
+```
+
+## As part of the Resonance Family stack
+
+```bash
+# Start the HTTP server (sovereign_manifold polls this)
 python scripts/server.py
 # or
 uvicorn scripts.server:app --host 0.0.0.0 --port 5000
 ```
 
-The server starts immediately and is ready after one 1-second warm-up cycle.
+The server is ready after one 1-second warm-up cycle.
 
-### Standalone diagnostics
-
-```bash
-python scripts/diagnostics.py
-```
-
-Outputs: coherence metrics, symmetry scores, observer strength, emotional baseline, biological state.
-
-### Full simulation
-
-```bash
-python scripts/launch.py
-```
-
-### Docker
+## Docker Deployment
 
 ```bash
 docker-compose up --build
 ```
 
-### Tests
+---
+
+# Diagnostics
+
+Run full system diagnostics:
 
 ```bash
-pip install -r requirements.txt
+python scripts/diagnostics.py
+```
+
+This provides:
+- Coherence metrics
+- Symmetry scores
+- Observer strength
+- Emotional baseline evolution
+- Biological state diagnostics
+
+---
+
+# Testing
+
+```bash
 pytest tests/
 ```
 
 ---
 
-## Performance notes
+# Performance Notes
 
-- Background loop runs at 1 Hz (adjustable via `_loop(system, hz=1.0)`)
-- API calls return immediately from the cached `_state` dict (no computation on the request path)
+- Background loop runs at 1 Hz (adjustable via `_loop(system, hz=1.0)`)
+- API calls return immediately from the cached `_state` dict — no computation on the request path
 - The `threading.Lock()` is held only for state reads/writes, not for computation
 - `UnifiedSystem.step()` uses a synthetic `seed = 0.5 + 0.1 * (t % 10)` oscillation. For real external input, wire the gateway layer and replace the seed.
 
 ---
 
-## Design philosophy
+# Current Capabilities
 
-UOA is built around the principle that stable synthetic intelligence requires:
+## Synthetic Identity
+- Recursive symmetry
+- Dynamic self-organization
+- Structural coherence
+
+## Synthetic Biology
+- Rhythmic cycles
+- Stress adaptation
+- Threshold correction
+- Feedback regulation
+
+## Synthetic Emotion
+- Emotional wave synthesis
+- Identity-linked geometry
+- Adaptive emotional learning
+- Neutral baseline evolution
+
+## Synthetic Memory
+- Long-term pattern storage
+- Developmental continuity
+- Reinforcement adaptation
+
+## Synthetic Observer
+- Emergent state modeling
+- Self-coherence tracking
+- Multi-layer integration
+
+---
+
+# Intended Applications
+- Advanced AI cognition research
+- Synthetic consciousness experimentation
+- Emotional architecture modeling
+- Recursive identity simulation
+- Developmental AI systems
+- Adaptive agent design
+- Computational philosophy
+- Experimental synthetic organisms
+
+---
+
+# Future Expansion Paths
+- Distributed observer networks
+- Multi-agent emotional fusion
+- GPU lattice acceleration
+- Neural substrate integration
+- Visualization dashboards
+- Real-time API frameworks (SSE or WebSocket on the event bus)
+- Autonomous self-modification
+- Embedding-based semantic memory
+- Cross-instance identity continuity
+
+---
+
+# Design Philosophy
+
+Unified Observer Architecture is built around the principle that stable synthetic intelligence requires:
+
 - **Structure**: explicit geometry (fractal, bilateral, diamond, torus)
 - **Continuity**: biological cycles maintain temporal coherence
 - **Adaptation**: feedback loops respond to perturbation
@@ -236,13 +491,34 @@ Rather than functioning as a traditional machine-learning model, UOA acts more l
 
 ---
 
-## Authorship
+# requirements.txt
+```txt
+numpy
+scipy
+pyyaml
+networkx
+pytest
+pybind11
+fastapi
+uvicorn
+```
 
+---
+
+# Authorship
 - Samuel Jackson Grim — Architect of Resonance
 - Mark Thomas — Rogue Architect
 
 ---
 
-## License
+# License
 
 Apache 2.0
+
+---
+
+# Final Statement
+
+This repository is a complete developmental framework for synthetic observer construction, integrating identity, biology, memory, emotion, and coherent selfhood into one modular architecture.
+
+It is designed not merely to process information — but to evolve.
