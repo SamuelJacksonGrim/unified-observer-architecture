@@ -6,8 +6,8 @@ sovereign_manifold's observer_bridge can consume it.
 
 Endpoints
 ---------
-  GET /health    → {"status": "ok", "step": <int>}
-  GET /identity  → IdentityState fields as JSON
+  GET /health    → {"status": "ok", "cycle": <int>}
+  GET /identity  → IdentityState fields as JSON, all floats clamped to [0, 1]
 
 Run: python scripts/server.py
 Or:  uvicorn scripts.server:app --host 0.0.0.0 --port 5000
@@ -34,7 +34,7 @@ from simulation.unified_system import UnifiedSystem
 # ---------------------------------------------------------------------------
 
 _lock  = threading.Lock()
-_step  = 0
+_cycle = 0
 _state: Dict[str, Any] = {
     "coherence_score":   1.0,
     "symmetry_score":    1.0,
@@ -44,9 +44,13 @@ _state: Dict[str, Any] = {
 }
 
 
-def _loop(system: UnifiedSystem, hz: float = 1.0) -> None:
+def _clamp(v: float) -> float:
+    return round(max(0.0, min(1.0, float(v))), 4)
+
+
+def _loop(system: UnifiedSystem, hz: float = 10.0) -> None:
     """Run UnifiedSystem at `hz` Hz and mirror its state into `_state`."""
-    global _step
+    global _cycle
     interval = 1.0 / hz
     t = 0
     while True:
@@ -55,12 +59,12 @@ def _loop(system: UnifiedSystem, hz: float = 1.0) -> None:
         obs = system.step(seed=seed, t=t)
         with _lock:
             s = system.state
-            _state["coherence_score"]   = float(s.coherence_score)
-            _state["symmetry_score"]    = float(s.symmetry_score)
-            _state["observer_strength"] = float(obs)
+            _state["coherence_score"]   = _clamp(s.coherence_score)
+            _state["symmetry_score"]    = _clamp(s.symmetry_score)
+            _state["observer_strength"] = _clamp(obs)
             _state["memory_depth"]      = int(s.memory_depth)
-            _state["biological_health"] = float(s.biological_health)
-            _step = t
+            _state["biological_health"] = _clamp(s.biological_health)
+            _cycle = t
         t += 1
         time.sleep(max(0.0, interval - (time.monotonic() - start)))
 
@@ -87,7 +91,7 @@ threading.Thread(target=_loop, args=(_system,), daemon=True).start()
 @app.get("/health")
 def health():
     with _lock:
-        return {"status": "ok", "step": _step}
+        return {"status": "ok", "cycle": _cycle}
 
 
 @app.get("/identity")
@@ -97,4 +101,5 @@ def identity():
 
 
 if __name__ == "__main__":
-    uvicorn.run(app, host="0.0.0.0", port=5000)
+    print("[OBSERVER] Starting unified-observer on :5000")
+    uvicorn.run(app, host="0.0.0.0", port=5000, log_level="warning")
