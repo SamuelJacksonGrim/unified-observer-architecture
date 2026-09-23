@@ -6,6 +6,15 @@
 [![release](https://img.shields.io/github/v/release/SamuelJacksonGrim/unified-observer-architecture)](https://github.com/SamuelJacksonGrim/unified-observer-architecture/releases/latest)
 ![status](https://img.shields.io/badge/status-early-success)
 
+## License
+
+This project is dual-licensed under **AGPL-3.0-only** OR a commercial license.
+
+- [LICENSE](LICENSE) — GNU AGPL-3.0-only (the free track)
+- [LICENSING.md](LICENSING.md) — how the two tracks work
+- [COMMERCIAL-LICENSE.md](COMMERCIAL-LICENSE.md) — the commercial agreement
+- [NOTICE](NOTICE) — copyright, SPDX identifier, and provenance
+
 
 ## Overview
 
