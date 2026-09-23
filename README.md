@@ -1,5 +1,12 @@
 # Unified Observer Architecture (UOA)
 
+[![License: AGPL-3.0-only](https://img.shields.io/badge/license-AGPL--3.0--only-blue)](LICENSE)
+[![dual-license](https://img.shields.io/badge/dual--license-AGPL--3.0--only%20or%20commercial-blueviolet)](LICENSING.md)
+[![Python](https://img.shields.io/badge/python-%3E%3D3.10-3776AB?logo=python&logoColor=white)](https://www.python.org)
+[![release](https://img.shields.io/github/v/release/SamuelJacksonGrim/unified-observer-architecture)](https://github.com/SamuelJacksonGrim/unified-observer-architecture/releases/latest)
+![status](https://img.shields.io/badge/status-early-success)
+
+
 ## Overview
 
 Unified Observer Architecture is a full-stack synthetic cognition, identity, biological simulation, memory retention, emotional processing, and adaptive developmental framework designed to model emergent observer systems.

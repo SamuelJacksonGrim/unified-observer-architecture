@@ -1,6 +1,7 @@
 from setuptools import setup, find_packages
 
 setup(
+    license="AGPL-3.0-only",
     name="unified_observer_architecture",
     version="1.0.0",
     packages=find_packages(),
